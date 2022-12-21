@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;500&display=swap");
+
+* {
+  font-family: "Commissioner", sans-serif;
+}
+
+input[type="range"] {
+  appearance: none;
+  height: 4px;
+  background: rgba(184, 149, 149, 0.6);
+  border-radius: 5px;
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: #0e172c;
+  box-shadow: 0 0 2px 0 #555;
+  cursor: pointer;
+}

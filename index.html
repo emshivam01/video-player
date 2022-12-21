@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="bg-[#fef6e4] flex h-screen w-screen justify-center items-center font-mono">
+<body class="bg-[#fec7d7] flex h-screen w-screen justify-center items-center ">
   <div class="main-container border-4 h-screen w-screen flex flex-col gap-10 p-2 md:py-4md:px-8">
 
     <div class="navbar py-4 md:px-6 flex justify-between">
@@ -22,21 +22,37 @@
     </div>
 
     <div class="flex flex-col items-center justify-center md:px-20 ">
-      <video class="md:w-[900px] rounded-lg" src="./videos/video.mp4"></video>
+      <video poster="./assets/thumbnail.png" class="md:w-[900px] rounded-lg" id="video" src="./videos/video.mp4"></video>
 
-      <div class="controls w-auto md:w-[900px] mt-2">
-        <input class="w-full track" type="range" value="25" name="" id="">
-        <div class="flex justify-between">
-          <div class="left">
+      <div class="controls w-auto md:w-[900px] mt-1">
 
-            <span class="material-symbols-rounded cursor-pointer"> skip_previous </span>
-            <span class="material-symbols-rounded cursor-pointer"> play_arrow </span>
-            <span class="material-symbols-rounded cursor-pointer"> skip_next </span>
+        <input class="w-full track" type="range" value="0" name="" id="progressBar">
+
+        <div class="flex justify-between items-center">
+
+          <div class="left flex gap-4">
+            <div class="flex gap-2">
+
+              <span class="material-symbols-rounded cursor-pointer"> skip_previous </span>
+
+
+              <span id="play" class="material-symbols-rounded cursor-pointer"> play_arrow </span>
+
+
+              <span class="material-symbols-rounded cursor-pointer"> skip_next </span>
+            </div>
+
+            <div class="flex gap-2  items-center">
+              <span id="volumeIcon" class="material-symbols-rounded">
+                volume_up
+              </span>
+              <input class="w-20" value="0.2" type="range" name="" id="volumeSlider" min="0" max="1" step="any">
+            </div>
           </div>
 
-          <div class="right">
+          <div class="right flex items-center gap-2">
 
-            <span class="material-symbols-rounded cursor-pointer">
+            <span id="fullscreen" class="material-symbols-rounded cursor-pointer">
               fullscreen
             </span>
             <span class="material-symbols-rounded cursor-pointer">
